@@ -24,23 +24,6 @@ div.battlescribe {
     text-align: left;
 }
 
-.rosters_list {
-    font-size: xx-large;
-    border-radius: 0;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.unit_list {
-    border-radius: .5rem;
-    padding: 0 .5rem 0 .5rem;
-    text-align: center;
-}
-
-.deathguard_roster {
-    background-color: greenyellow;
-}
-
 div.battlescribe h1,
 div.battlescribe h2,
 div.battlescribe h3,
@@ -206,11 +189,31 @@ div.battlescribe span.caps {
 
 /* My edit */
 
+.rosters_list {
+    font-size: xx-large;
+    border-radius: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.unit {
+    display: flex;
+    gap: .5rem;
+    border-radius: .5rem;
+    padding: 0 .5rem 0 .5rem;
+    text-align: center;
+    align-items: center;
+}
+
 .unitList {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
+}
+
+.deathguard_roster {
+    background-color: greenyellow;
 }
 
 .list_header {

@@ -17,7 +17,7 @@ function UnitsList(props: Props) {
 
     const renderedOperatives = operatives.map((op, index) => {
         // General edits
-        let status: JSX.Element = <span>''</span>;
+        let status: JSX.Element = <span></span>;
         let nameStyle = {}
 
         if (!lifeArray[index]) {
@@ -36,9 +36,9 @@ function UnitsList(props: Props) {
        // Icon Bearer
 
         return <div className='list_row' key={index} style={nameStyle}>
-            <div className='unit_list deathguard_roster'>
+            <div className='unit deathguard_roster'>
                 <Link to={`/DeathGuard/${op.name}`}>{op.name}</Link>
-                <span>{status}</span>
+                {status}
             </div>
             <div>
                 {lifeArray[index]} / {op.life} :
