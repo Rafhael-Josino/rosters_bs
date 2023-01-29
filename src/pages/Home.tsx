@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import { HiOutlineBeaker } from 'react-icons/hi';
+import { GiRadioactive } from 'react-icons/gi';
 import Header from '../components/Header';
 
 function Home() {
     return <div>
         <Header />
-        <div className='battlescribe rosters_list'>
+        <div className='rosters_list'>
             <div className='deathguard_roster'>
-                <Link to="DeathGuard">Death Guard <HiOutlineBeaker /></Link>
+                <Link to="DeathGuard">Death Guard <GiRadioactive /></Link>
             </div>
         </div>
         <div className='footnote'>

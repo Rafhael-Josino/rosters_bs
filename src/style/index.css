@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
 
 /* Header */
@@ -48,7 +49,7 @@ body {
 @media (max-width: 500px) {
     .header,
     .footnote {
-        width: 500px;
+        width: 100vw;
     }
 
     .container-header {

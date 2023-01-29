@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SlArrowLeftCircle } from 'react-icons/sl';
+import { GiDeathSkull } from 'react-icons/gi';
 
 type Props = {
     lifeArray: number[],
@@ -16,11 +17,11 @@ function UnitsList(props: Props) {
 
     const renderedOperatives = operatives.map((op, index) => {
         // General edits
-        let status: string = '';
+        let status: JSX.Element = <span>''</span>;
         let nameStyle = {}
 
         if (!lifeArray[index]) {
-            status = ' (fallen)';
+            status = <GiDeathSkull />;
             nameStyle = { 'color': 'red'};
         } 
         // Not valid for death guard (it does not get injured)
@@ -35,7 +36,7 @@ function UnitsList(props: Props) {
        // Icon Bearer
 
         return <div className='list_row' key={index} style={nameStyle}>
-            <div >
+            <div className='unit_list deathguard_roster'>
                 <Link to={`/DeathGuard/${op.name}`}>{op.name}</Link>
                 <span>{status}</span>
             </div>

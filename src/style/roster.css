@@ -24,16 +24,21 @@ div.battlescribe {
     text-align: left;
 }
 
-div.battlescribe.rosters_list {
+.rosters_list {
     font-size: xx-large;
-    font-style: normal;
-    margin: 16px 0 0 0;
+    border-radius: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.unit_list {
+    border-radius: .5rem;
+    padding: 0 .5rem 0 .5rem;
+    text-align: center;
 }
 
 .deathguard_roster {
     background-color: greenyellow;
-    border-radius: .5rem;
-    padding-left: 1rem;
 }
 
 div.battlescribe h1,
@@ -234,10 +239,8 @@ div.battlescribe span.caps {
 
 @media (max-width: 500px) {
     div.battlescribe {
-        width: 500px;
+        width: 100vw;
         padding-left: 2rem;
-        padding-right: 2rem;;
+        padding-right: 2rem;
     }
-
-
 }
