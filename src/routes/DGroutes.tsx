@@ -24,11 +24,11 @@ function DGroutes (props: Props) {
             />} 
         />
         <Route path='/Leader' element={<Leader />} />
-        <Route path='/Heavy_Gunner' element={<HeavyGunner />} />
-        <Route path='/Icon_Bearer' element={<IconBearer />} />
+        <Route path='/Heavy Gunner' element={<HeavyGunner />} />
+        <Route path='/Icon Bearer' element={<IconBearer />} />
         <Route path='/Gunner' element={<Gunner />} />
-        <Route path='/Warrior_Krak' element={<WarriorKrak />} />
-        <Route path='/Warrior_Blight' element={<WarriorBlight />} />
+        <Route path='/Warrior Krak' element={<WarriorKrak />} />
+        <Route path='/Warrior Blight' element={<WarriorBlight />} />
     </Routes>
 }
 

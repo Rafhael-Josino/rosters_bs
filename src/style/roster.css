@@ -1,13 +1,5 @@
 /* CSS from roster */
 
-.header.deathguard {
-    background-color: yellowgreen;
-}
-
-.header.deathguard .header-title {
-    color: black;
-}
-
 div.battlescribe {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -189,6 +181,14 @@ div.battlescribe span.caps {
 
 /* My edit */
 
+.header.deathguard {
+    background-color: yellowgreen;
+}
+
+.header.deathguard .header-title {
+    color: black;
+}
+
 .rosters_list {
     font-size: xx-large;
     border-radius: 0;
@@ -196,13 +196,8 @@ div.battlescribe span.caps {
     margin-top: 1rem;
 }
 
-.unit {
-    display: flex;
-    gap: .5rem;
-    border-radius: .5rem;
-    padding: 0 .5rem 0 .5rem;
-    text-align: center;
-    align-items: center;
+.list_header {
+    font-weight: bold;
 }
 
 .unitList {
@@ -212,13 +207,6 @@ div.battlescribe span.caps {
     gap: 1rem;
 }
 
-.deathguard_roster {
-    background-color: greenyellow;
-}
-
-.list_header {
-    font-weight: bold;
-}
 
 .list_row {
     display: flex;
@@ -228,6 +216,15 @@ div.battlescribe span.caps {
 .list_row.return {
     justify-content: center;
     margin-bottom: 1rem;
+}
+
+.unit {
+    border-radius: .5rem;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.down {
+    color: red;
 }
 
 .damage:hover {

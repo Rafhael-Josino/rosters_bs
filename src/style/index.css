@@ -8,6 +8,15 @@ body {
     width: 100vw;
 }
 
+a:-webkit-any-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+
+}
+
 /* Header */
 .header {
     background-color: orange;

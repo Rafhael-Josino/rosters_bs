@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 import { GiDeathSkull } from 'react-icons/gi';
+import { GiHealthNormal } from 'react-icons/gi';
+import { GiSpikyExplosion } from 'react-icons/gi';
 
 type Props = {
     lifeArray: number[],
@@ -18,11 +20,11 @@ function UnitsList(props: Props) {
     const renderedOperatives = operatives.map((op, index) => {
         // General edits
         let status: JSX.Element = <span></span>;
-        let nameStyle = {}
+        let status_css: string = '';
 
         if (!lifeArray[index]) {
             status = <GiDeathSkull />;
-            nameStyle = { 'color': 'red'};
+            status_css = 'down';
         } 
         // Not valid for death guard (it does not get injured)
         /*
@@ -35,23 +37,26 @@ function UnitsList(props: Props) {
        // Operatives specific customizations:
        // Icon Bearer
 
-        return <div className='list_row' key={index} style={nameStyle}>
-            <div className='unit deathguard_roster'>
-                <Link to={`/DeathGuard/${op.name}`}>{op.name}</Link>
-                {status}
+        return <div className='list_row' key={index}>
+            <div className='unit deathguard_unit'>
+                <Link className={status_css} to={`/DeathGuard/${op.name}`}>{op.name}{status}</Link>
             </div>
             <div>
-                {lifeArray[index]} / {op.life} :
+                {lifeArray[index]} / {op.life}--
 
                 <button 
                     className='damage'
                     onClick={() => woundHandler(index, lifeArray[index]-1, op.life)}
-                >-1</button>
-                <span>{" / "}</span>
+                >
+                    <GiSpikyExplosion />
+                </button>
+                <span>{" | "}</span>
                 <button 
                     className='damage'
                     onClick={() => woundHandler(index, lifeArray[index]+1, op.life)}
-                >+1</button>
+                >
+                    <GiHealthNormal />
+                </button>
             </div>
         </div>
 
