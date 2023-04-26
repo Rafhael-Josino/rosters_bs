@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DGHeader from './DGHeader';
 import DGroutes from '../../routes/DGroutes';
 
@@ -14,9 +14,25 @@ function DGHome() {
     ];
 
     const lifeArrayHandler = (index: number, newLife: number) => {
-        setLifeArray([...lifeArray.slice(0, index), newLife, ...lifeArray.slice(index+1)]);
+        const newLifeArray = [
+            ...lifeArray.slice(0, index), 
+            newLife, 
+            ...lifeArray.slice(index+1)
+        ];
+
+        sessionStorage.setItem('life_array', String(newLifeArray));
+
+        setLifeArray(newLifeArray);
     }
 
+
+    useEffect(() => {
+        if (sessionStorage.getItem('life_array')) {
+            setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array') + "]"));
+        }
+    }, []);
+
+    
     return <div>
         <DGHeader />
         <div className='battlescribe'>
