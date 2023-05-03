@@ -5,6 +5,7 @@ import Header from '../components/Header';
 
 function Home() {
   const [file, setFile] = useState<File>();
+  const [operativesString, setOperativesString] = useState<string>('');
 
   /**
    * Handlers
@@ -17,7 +18,22 @@ function Home() {
   const onSubmitHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
 
-    console.log(file)
+    if (file) {
+      const fileReader = new FileReader();
+
+      fileReader.onload = (event) => {
+        // console.log(event.target?.result)
+
+        setOperativesString(event.target?.result as string)
+
+        // const array = (event.target?.result as string).match(/<li class="rootselection">(.+|\n)+<\/li>/);
+        // console.log(array)
+      };
+
+      fileReader.readAsText(file);
+    } else {
+      console.log("Failed to load file");
+    }
   }
 
 
@@ -39,6 +55,12 @@ function Home() {
           Upload team list
         </button>
       </form>
+    </div>
+
+    <div dangerouslySetInnerHTML={{
+      __html: operativesString,
+    }}>
+
     </div>
     
     <div className='footnote'>
