@@ -109,7 +109,8 @@
 }
 
 .descriptions-line div {
-  font-size: small;
+  /* width: 100%; */
+  font-size: smaller;
 
   display: flex;
   flex-direction: column;
@@ -117,9 +118,14 @@
 
 .wargear, .special-rules {
   border-right: var(--spacement) var(--divisors-color) solid;
-  width: 100%;
+  padding-right: var(--spacement);
+  width: 35%;
 }
 
-.injuries {
-  width: 30%;
+.special-rules, .injuries {
+  padding-left: var(--spacement);
+}
+
+.title-description {
+  margin-left: var(--spacement);
 }

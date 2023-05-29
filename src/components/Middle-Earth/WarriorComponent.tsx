@@ -106,19 +106,19 @@ export default function WarriorComponent (props: Props) {
 
     <div className="line descriptions-line">
       <div className="wargear">
-        <div>WARGEAR</div>
+        <div className="title-description">WARGEAR</div>
         <div className="divisor vertical" />
         <div className="description">{wargear}</div>
       </div>
       
       <div className="special-rules">
-        <div>SPECIAL RULES</div>
+        <div className="title-description">SPECIAL RULES</div>
         <div className="divisor vertical" />
         <div className="description">{specialRules}</div>
       </div>
 
       <div className="injuries">
-        <div>INJURIES</div>
+        <div className="title-description">INJURIES</div>
         <div className="divisor vertical" />
         <div className="description">{injuries}</div>
       </div>
