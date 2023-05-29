@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './components/App'
 import './style/index.css';
 import './style/roster.css';
+import './style/MiddleEarth.css';
 
 const router = createBrowserRouter([{
     path: "/*",

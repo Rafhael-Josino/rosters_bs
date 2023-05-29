@@ -1,0 +1,125 @@
+:root {
+  --spacement: 2px;
+  --background-color-dark: rgb(238, 160, 163);
+  --background-color-light: rgb(248, 238, 238);
+  --background-color-light-old: rgb(196, 196, 173);
+  --divisors-color: rgb(200, 5, 5);
+}
+
+.sheet {
+  width: 90%;
+  margin: 10px;
+
+  border: var(--spacement) var(--divisors-color) solid;
+  background-color: var(--background-color-light);
+  color: var(--divisors-color);
+  font-weight: bold;
+  background: linear-gradient(to right, var(--background-color-light), 95%, var(--background-color-light-old));
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  padding: 1px 3px 1px 3px;
+  height: 20px;
+}
+
+.line.name {
+  background-color: var(--background-color-dark);
+  height: 22px;
+}
+
+.divisor.horizontal {
+  width: 100%;
+  height: var(--spacement);
+  background-color: var(--divisors-color);
+
+  margin-top: var(--spacement);
+  margin-bottom: var(--spacement);
+}
+
+.divisor.vertical {
+  height: var(--spacement);
+  background-color: var(--divisors-color);
+
+  margin-left: var(--spacement);
+  margin-right: var(--spacement);
+}
+
+.left-block {
+  width: 70%;
+  border-right: var(--spacement) var(--divisors-color) solid;
+}
+
+.right-block {
+  padding-left: calc(var(--spacement) + 2px);
+}
+
+.type-line.left-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.attributes-line {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.attributes.left-block {
+  padding-right: var(--spacement);
+}
+
+.attributes.right-block {
+  width: 30%;
+}
+
+.status-line,
+.powers-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.status-value {
+  border-right: var(--spacement) var(--divisors-color) solid;
+}
+
+.status-line span {
+  width: 14.2%;
+  text-align: center;
+}
+
+.powers-line span {
+  width: 33%;
+  text-align: center;
+}
+
+.descriptions-line {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+}
+
+.descriptions-line {
+  display: flex;
+  flex-direction: row;
+}
+
+.descriptions-line div {
+  font-size: small;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.wargear, .special-rules {
+  border-right: var(--spacement) var(--divisors-color) solid;
+  width: 100%;
+}
+
+.injuries {
+  width: 30%;
+}
