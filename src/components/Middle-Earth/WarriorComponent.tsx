@@ -1,28 +1,7 @@
+import { MiddleEarthOperativeType } from "../../utils/types";
+
 interface Props {
-  characterInfo: {
-    name: string;
-    hero: boolean;
-    points: number;
-    chosenPath: string;
-    status: {
-      move: number;
-      f: number;
-      strength: number;
-      defense: number;
-      attack: number;
-      wounds: number;
-      courage: number;
-    };
-    powers: {
-      might: number;
-      will: number;
-      fate: number;
-    };
-    wargear: string;
-    specialRules: string;
-    injuries: string;
-    xp: number;
-  }
+  warrior: MiddleEarthOperativeType
 }
 
 export default function WarriorComponent (props: Props) {
@@ -37,7 +16,7 @@ export default function WarriorComponent (props: Props) {
     specialRules,
     injuries,
     xp,
-  } = props.characterInfo;
+  } = props.warrior;
 
 
   return <div className="sheet">

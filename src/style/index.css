@@ -32,16 +32,13 @@ a:-webkit-any-link {
     width: 70%;
     margin: 0 5% 0 5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 15px;
-}
-
-.header-title {
     color: white;
     font-size: xxx-large;
     text-align: right;
 }
+
 
 .footnote {
     background-color: orange;

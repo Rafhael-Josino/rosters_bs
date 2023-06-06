@@ -17,11 +17,13 @@ function DGroutes (props: Props) {
     const { lifeArray, lifeArrayHandler, operatives} = props;
 
     return <Routes>
-        <Route path='/*' element={<UnitsList 
-                lifeArray={lifeArray} 
-                lifeArrayHandler={lifeArrayHandler}
-                operatives={operatives}
-            />} 
+        <Route path='/*' element={
+            <UnitsList 
+              lifeArray={lifeArray} 
+              lifeArrayHandler={lifeArrayHandler}
+              operatives={operatives}
+            />
+          } 
         />
         <Route path='/Leader' element={<Leader />} />
         <Route path='/Heavy Gunner' element={<HeavyGunner />} />

@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 function Home() {
   return <div>
-    <Header />
+    <Header title='Rosters' />
 
     <div className='rosters_list' style={{'backgroundColor': 'yellowgreen'}}>
       <Link
