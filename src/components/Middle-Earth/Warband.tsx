@@ -1,26 +1,42 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SlArrowLeftCircle } from 'react-icons/sl';
-import { MiddleEarthOperativeType } from '../../utils/types';
+import { MiddleEarthWarbandType } from '../../utils/types';
+import Header from '../Header';
 import WarriorComponent from './WarriorComponent';
 
 interface Props {
-  warriors: MiddleEarthOperativeType[]
+  warband: MiddleEarthWarbandType;
 }
 
 export default function Warband (props: Props) {
-  const { warriors } = props;
+  const { warband } = props;
+  const [showWarrior, setShowWarrior] = useState<number>();
+
+  const setShowWarriorHandler = (index: number) => setShowWarrior(index);
   
-  const renderedWarband = warriors.map(warrior => {
-    return <WarriorComponent
-      warrior={warrior}
-    />
+  const renderedWarband = warband.warriors.map((warrior, index) => {
+    return <div
+      className='warrior-div' 
+      onClick={() => setShowWarriorHandler(index)}>
+        {
+          index === showWarrior?
+            <WarriorComponent warrior={warrior} />
+          :  
+            <div className='closed-sheet'>{warrior.name}</div>
+        }
+      </div>
   });
 
   return <div>
-    <div className='list_row return'>
-      <Link to='/MiddleEarth'><SlArrowLeftCircle className='react-icons' /></Link>
-    </div>
+    <Header title={warband.name} />
 
-    {renderedWarband}
+    <div className='battlescribe'>
+      <div className='list_row return'>
+        <Link to='/MiddleEarth'><SlArrowLeftCircle className='react-icons' /></Link>
+      </div>
+
+      {renderedWarband}
+    </div>
   </div>
 }

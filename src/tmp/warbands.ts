@@ -1,12 +1,10 @@
 import angmar from './angmar';
 
-export default [
+const warbands = [
   {
     name: 'Angmar',
     warriors: angmar,
-  },
-  {
-    name: 'Mordor (empty)',
-    warriors: [],
   }
 ]
+
+export default warbands;

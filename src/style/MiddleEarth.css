@@ -28,9 +28,6 @@
 /* Warrior sheet */
 
 .sheet {
-  width: 90%;
-  margin: 10px;
-
   border: var(--spacement) var(--divisors-color) solid;
   background-color: var(--background-color-light);
   color: var(--divisors-color);
@@ -148,4 +145,23 @@
 
 .title-description {
   margin-left: var(--spacement);
+}
+
+.warrior-div {
+  margin-bottom: 10px;
+}
+
+.closed-sheet {
+  color: var(--divisors-color);
+  font-weight: bold;
+  background-color: var(--background-color-dark);
+  height: 24px;
+  padding: 1px 3px 1px 3px;
+  border: var(--spacement) var(--divisors-color) solid;
+  display: flex;
+  align-items: center;
+}
+
+.closed-sheet:hover {
+  cursor: pointer;
 }
