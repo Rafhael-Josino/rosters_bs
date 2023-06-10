@@ -18,7 +18,7 @@
   align-items: center;
   font-size: xx-large;
   border-radius: 5px;
-  color: black;
+  color: white;
 }
 
 .warband-title:hover {
@@ -164,4 +164,79 @@
 
 .closed-sheet:hover {
   cursor: pointer;
+}
+
+.wound-chart {
+  width: 100%;
+  margin-top: 30px;
+  padding: 2px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* border: 1px red solid; */
+}
+
+.wound-chart-div-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wound-chart-div-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wound-chart-strength-title {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 5px;
+}
+
+.wound-chart-down-hand {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: -280px;
+}
+
+.wound-chart-right-hand {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -230px;
+}
+
+.wound-chart-strength-title div {
+  text-align: center;
+}
+
+.wound-chart-table {
+  width: 100%;
+}
+
+.wound-chart-table tr td {
+  text-align: center;
+  width: 9.09091%;
+}
+
+.header-table {
+  background-color: var(--background-color-dark);
+}
+
+.header-table:hover {
+  cursor: pointer;
+}
+
+.empty-cell {
+  background-color: var(--background-color-light);
+}
+
+.selected-row, .selected-column {
+  background-color: var(--background-color-light-old);
+}
+
+.result-cell {
+  background-color: var(--divisors-color);
 }
