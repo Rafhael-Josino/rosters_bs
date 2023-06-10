@@ -1,16 +1,16 @@
-import { SlDocs } from "react-icons/sl";
-
 interface Props {
   title: string;
+  color?: string;
 }
 
 function Header(props: Props) {
-  const { title } = props;
+  const { title, color } = props;
 
-  return <header className="header">
+  const headerColor = color? color : 'orange';
+
+  return <header className="header" style={{backgroundColor: headerColor}}>
     <div className="container-header">
-          <span>{title}</span>
-          <SlDocs />
+      {title}
     </div>
   </header>
 }

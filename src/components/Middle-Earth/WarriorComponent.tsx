@@ -42,7 +42,7 @@ export default function WarriorComponent (props: Props) {
     <div className="line attributes-line">
       <div className="attributes left-block">
         <div className="status-line">
-          <span className="status-value">MV</span>
+          <span className="status-value">M</span>
           <span className="status-value">F</span>
           <span className="status-value">S</span>
           <span className="status-value">D</span>

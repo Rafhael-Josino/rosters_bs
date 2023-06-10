@@ -4,6 +4,7 @@ import { SlArrowLeftCircle } from 'react-icons/sl';
 import { MiddleEarthWarbandType } from '../../utils/types';
 import Header from '../Header';
 import WarriorComponent from './WarriorComponent';
+import WoundChart from './WoundChart';
 
 interface Props {
   warband: MiddleEarthWarbandType;
@@ -29,7 +30,7 @@ export default function Warband (props: Props) {
   });
 
   return <div>
-    <Header title={warband.name} />
+    <Header title={warband.name} color={'rgb(106,130,168)'} />
 
     <div className='battlescribe'>
       <div className='list_row return'>
@@ -37,6 +38,8 @@ export default function Warband (props: Props) {
       </div>
 
       {renderedWarband}
+
+      <WoundChart />
     </div>
   </div>
 }

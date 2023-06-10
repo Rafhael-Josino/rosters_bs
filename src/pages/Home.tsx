@@ -13,7 +13,7 @@ function Home() {
         to="DeathGuard">Death Guard <GiRadioactive /></Link>
     </div>
 
-    <div className='rosters_list' style={{'backgroundColor': 'yellow'}}>
+    <div className='rosters_list' style={{'backgroundColor': 'yellowgreen'}}>
       <Link
         state={{ 'align-itens': 'center' }} 
         to="MiddleEarth">Middle Earth <FaRing /></Link>
