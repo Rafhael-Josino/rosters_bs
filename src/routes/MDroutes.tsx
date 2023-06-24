@@ -12,6 +12,7 @@ export default function routes(props: Props) {
 
   const renderedRoutes = warbands.map(warband => {
     return <Route
+      key={warband.name}
       path={`/${warband.name}`}
       element={<Warband warband={warband} />}
     />

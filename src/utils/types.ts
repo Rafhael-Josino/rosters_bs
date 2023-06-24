@@ -5,7 +5,7 @@ export interface MiddleEarthOperativeType {
   chosenPath: string;
   status: {
     move: number;
-    f: number;
+    fight: number;
     strength: number;
     defense: number;
     attack: number;

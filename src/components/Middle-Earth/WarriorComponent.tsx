@@ -55,7 +55,7 @@ export default function WarriorComponent (props: Props) {
 
         <div className="status-line">
           <span className="status-value">{status.move}</span>
-          <span className="status-value">{status.f}</span>
+          <span className="status-value">{status.fight}</span>
           <span className="status-value">{status.strength}</span>
           <span className="status-value">{status.defense}</span>
           <span className="status-value">{status.attack}</span>
