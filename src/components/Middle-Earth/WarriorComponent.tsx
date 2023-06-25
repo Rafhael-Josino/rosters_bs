@@ -26,8 +26,10 @@ export default function WarriorComponent (props: Props) {
 
     <div className="line">
       <div className="type-line left-block">
-        <input type='radio' name='type-warrior' value='warrior' checked={!hero} />Warrior<br/>
-        <input type='radio' name='type-warrior' value='hero' checked={hero} />Hero<br/>
+        {/* <input type='radio' name='type-warrior' value='warrior' checked={!hero} />Warrior<br/>
+        <input type='radio' name='type-warrior' value='hero' checked={hero} />Hero<br/> */}
+        {/* The inputs will used in the form component */}
+        {hero? 'Hero' : 'Warrior'}
       </div>
 
       <div className="type-line right-block">Points: {points}</div>
