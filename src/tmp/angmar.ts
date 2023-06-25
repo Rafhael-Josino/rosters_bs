@@ -6,7 +6,7 @@ const angmar = [
     chosenPath: 'Evil',
     status: {
       move: 6,
-      f: 2,
+      fight: 3,
       strength: 3,
       defense: 4,
       attack: 1,
@@ -30,7 +30,7 @@ const angmar = [
     chosenPath: 'Evil',
     status: {
       move: 6,
-      f: 2,
+      fight: 3,
       strength: 3,
       defense: 4,
       attack: 1,
@@ -54,7 +54,7 @@ const angmar = [
     chosenPath: 'Evil',
     status: {
       move: 6,
-      f: 2,
+      fight: 3,
       strength: 3,
       defense: 4,
       attack: 1,
@@ -78,7 +78,7 @@ const angmar = [
     chosenPath: 'Evil',
     status: {
       move: 5,
-      f: 2,
+      fight: 3,
       strength: 3,
       defense: 4,
       attack: 1,

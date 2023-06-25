@@ -2,24 +2,25 @@ import { Link } from 'react-router-dom';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 import { GiSpikedDragonHead } from 'react-icons/gi';
 import Header from '../Header';
-import { MiddleEarthWarbandType } from '../../utils/types';
+import { BattleCompaniesWarbandType } from '../../utils/types';
 import WoundChart from './WoundChart';
 
 interface Props {
-  warbands: MiddleEarthWarbandType[]
+  warbands: BattleCompaniesWarbandType[]; // fix type
 }
 
 export default function WarbandsList(props: Props) {
   const { warbands } = props;
+  const allowWarbands = true;
  
   const renderedWarbandTitles = warbands.map(warband => {
-    return <Link to={`/MiddleEarth/${warband.name}`}>
+    return <Link to={`/MiddleEarth/${warband.id}`} key={warband.id}>
         <div 
           className='warband-title' 
           style={{ 'backgroundColor': 'rgb(106,130,168)' }}
           >
           <GiSpikedDragonHead /> 
-          <span>{warband.name}</span>
+          <span>{warband.id}</span>
           <GiSpikedDragonHead />
         </div>
     </Link>
@@ -33,9 +34,16 @@ export default function WarbandsList(props: Props) {
         <Link to='/'><SlArrowLeftCircle className='react-icons' /></Link>
       </div>
 
-      Warbands:
+      {
+        allowWarbands?
+          <div>
+            Warbands:
 
-      {renderedWarbandTitles}
+            {renderedWarbandTitles}
+          </div>
+        :
+          null
+      }
 
       <WoundChart />
     </div>
