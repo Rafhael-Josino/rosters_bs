@@ -17,7 +17,9 @@ function DGroutes (props: Props) {
     const { lifeArray, lifeArrayHandler, operatives} = props;
 
     return <Routes>
-        <Route path='/*' element={
+        <Route 
+          path='/*' 
+          element={
             <UnitsList 
               lifeArray={lifeArray} 
               lifeArrayHandler={lifeArrayHandler}

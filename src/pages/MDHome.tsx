@@ -4,8 +4,14 @@ import MDRoutes from '../routes/MDroutes';
 import { getTable } from '../apis/AWS_API';
 
 export default function Home() {
+  /**
+   * State
+   */
   const [warbands, setWarbands] = useState([]);
 
+  /**
+   * Use Effect
+   */
   useEffect(() => {
     const loadData = async () => {
       const res = await getTable('BattleCompaniesWarbands');
@@ -25,5 +31,8 @@ export default function Home() {
     }
   }, []);
 
+  /**
+   * Component returned
+   */
   return <MDRoutes warbands={warbands} />
 }

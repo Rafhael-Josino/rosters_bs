@@ -8,7 +8,7 @@ export const getTable = async (TableName: string) => {
     return res.data;
   } catch(err: any) {
     console.log("Error at getting table", TableName);
-    return err;
+    return [];
   }
 }
 
@@ -18,6 +18,6 @@ export const getWarriors = async (warband: string) => {
     return res.data;
   } catch(err: any) {
     console.log("Error at getting warriors from", warband);
-    return err;
+    return [];
   }
 }

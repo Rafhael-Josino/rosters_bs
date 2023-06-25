@@ -10,7 +10,6 @@ interface Props {
 export default function routes(props: Props) {
   const { warbands } = props;
 
-  // const renderedRoutes = warbands.map(warband => {
   const renderedRoutes = warbands.map(warband => {
     return <Route
       key={warband.id}
