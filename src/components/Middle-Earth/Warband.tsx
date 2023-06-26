@@ -7,6 +7,7 @@ import { MiddleEarthOperativeType } from '../../utils/types';
 import Header from '../Header';
 import WarriorComponent from './WarriorComponent';
 import WoundChart from './WoundChart';
+import Spinner from '../Spinner';
 
 interface Props {
   warband: string;
@@ -17,8 +18,8 @@ export default function Warband (props: Props) {
   /**
    * Properties and State
    */
-  const { warband,  } = props; // username will be used when backend|DB get fixed
-  const [warriors, setWarriors] = useState<MiddleEarthOperativeType[]>([]);
+  const { warband, } = props; // username will be used when backend|DB get fixed
+  const [warriors, setWarriors] = useState<MiddleEarthOperativeType[] | null>(null);
   const [showWarriorByIndex, setShowWarriorByIndex] = useState<number>();
 
   /**
@@ -32,19 +33,22 @@ export default function Warband (props: Props) {
   /**
    * Elements from component
    */
-  const renderedWarband = warriors.map((warrior, index) => {
-    return <div
-      key={warrior.name}
-      className='warrior-div' 
-      onClick={() => setShowWarriorHandler(index)}> {/* event handler must be moved */}
-        {
-          index === showWarriorByIndex?
-            <WarriorComponent warrior={warrior} />
-          :  
-            <div className='closed-sheet'>{warrior.name}</div>
-        }
-      </div>
-  });
+  const renderedWarband = warriors === null?
+    <Spinner message='' />
+  :
+    warriors.map((warrior, index) => {
+      return <div
+        key={warrior.name}
+        className='warrior-div' 
+        onClick={() => setShowWarriorHandler(index)}> {/* event handler must be moved */}
+          {
+            index === showWarriorByIndex?
+              <WarriorComponent warrior={warrior} />
+            :  
+              <div className='closed-sheet'>{warrior.name}</div>
+          }
+        </div>
+    })
 
   /**
    * Use Effect

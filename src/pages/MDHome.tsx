@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 
 import MDRoutes from '../routes/MDroutes';
 import { getTable } from '../apis/AWS_API';
+import Spinner from '../components/Spinner';
 
 export default function Home() {
   /**
    * State
    */
-  const [warbands, setWarbands] = useState([]);
+  const [warbands, setWarbands] = useState(null);
 
   /**
    * Use Effect
@@ -34,5 +35,14 @@ export default function Home() {
   /**
    * Component returned
    */
-  return <MDRoutes warbands={warbands} />
+  return <>
+    {
+      warbands?
+        <MDRoutes warbands={warbands} />
+      :
+        <div className='spinner-container'>
+          <Spinner message=''/>
+        </div>
+    }
+  </>
 }
