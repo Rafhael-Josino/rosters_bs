@@ -47,6 +47,10 @@
   height: 22px;
 }
 
+.line.name:hover {
+  cursor: pointer;
+}
+
 .divisor.horizontal {
   width: 100%;
   height: var(--spacement);

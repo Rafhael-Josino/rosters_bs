@@ -40,14 +40,22 @@ export default function Warband (props: Props) {
       return <div
         key={warrior.name}
         className='warrior-div' 
-        onClick={() => setShowWarriorHandler(index)}> {/* event handler must be moved */}
-          {
-            index === showWarriorByIndex?
-              <WarriorComponent warrior={warrior} />
-            :  
-              <div className='closed-sheet'>{warrior.name}</div>
-          }
-        </div>
+      >
+        {
+          index === showWarriorByIndex?
+            <WarriorComponent 
+              warrior={warrior} 
+              setShowWarriorByIndex={setShowWarriorByIndex}
+            />
+          :  
+            <div 
+              className='closed-sheet'
+              onClick={() => setShowWarriorHandler(index)}       
+            >
+              {warrior.name}
+            </div>
+        }
+      </div>
     })
 
   /**

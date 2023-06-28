@@ -1,10 +1,12 @@
 import { MiddleEarthOperativeType } from "../../utils/types";
 
 interface Props {
-  warrior: MiddleEarthOperativeType
+  warrior: MiddleEarthOperativeType;
+  setShowWarriorByIndex: (newIndex: number) => void
 }
 
 export default function WarriorComponent (props: Props) {
+  const { setShowWarriorByIndex } = props;
   const {
     name,
     hero, 
@@ -20,15 +22,15 @@ export default function WarriorComponent (props: Props) {
 
 
   return <div className="sheet">
-    <div className="line name">Name: {name}</div>
+    <div 
+      className="line name"
+      onClick={() => setShowWarriorByIndex(-1)}
+    >Name: {name}</div>
 
     <div className="divisor horizontal" style={{marginTop:'0'}}/>
 
     <div className="line">
       <div className="type-line left-block">
-        {/* <input type='radio' name='type-warrior' value='warrior' checked={!hero} />Warrior<br/>
-        <input type='radio' name='type-warrior' value='hero' checked={hero} />Hero<br/> */}
-        {/* The inputs will used in the form component */}
         {hero? 'Hero' : 'Warrior'}
       </div>
 
