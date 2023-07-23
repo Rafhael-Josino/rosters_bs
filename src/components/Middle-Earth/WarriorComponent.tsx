@@ -1,12 +1,14 @@
 import { MiddleEarthOperativeType } from "../../utils/types";
+import { FaFeatherAlt } from 'react-icons/fa';
 
 interface Props {
   warrior: MiddleEarthOperativeType;
-  setShowWarriorByIndex: (newIndex: number) => void
+  setShowWarriorByIndex: (newIndex: number) => void;
+  openModalHandler: () => void;
 }
 
 export default function WarriorComponent (props: Props) {
-  const { setShowWarriorByIndex } = props;
+  const { setShowWarriorByIndex, openModalHandler } = props;
   const {
     name,
     hero, 
@@ -25,7 +27,12 @@ export default function WarriorComponent (props: Props) {
     <div 
       className="line name"
       onClick={() => setShowWarriorByIndex(-1)}
-    >Name: {name}</div>
+    >
+      <span>Name: {name}</span>
+      <FaFeatherAlt 
+        onClick={openModalHandler}
+      />
+    </div>
 
     <div className="divisor horizontal" style={{marginTop:'0'}}/>
 

@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-overlays/Modal';
+import{ ModalProps} from 'react-overlays/cjs/Modal';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 
 import { getWarriors } from '../../apis/AWS_API';
 import { MiddleEarthOperativeType } from '../../utils/types';
 import Header from '../Header';
 import WarriorComponent from './WarriorComponent';
+import WarriorCompenentForm from './WarriorComponentForm';
 import WoundChart from './WoundChart';
 import Spinner from '../Spinner';
 
@@ -21,6 +24,7 @@ export default function Warband (props: Props) {
   const { warband, } = props; // username will be used when backend|DB get fixed
   const [warriors, setWarriors] = useState<MiddleEarthOperativeType[] | null>(null);
   const [showWarriorByIndex, setShowWarriorByIndex] = useState<number>();
+  const [showModal, setShowModal] = useState<number>(-1);
 
   /**
    * Handlers
@@ -46,6 +50,7 @@ export default function Warband (props: Props) {
             <WarriorComponent 
               warrior={warrior} 
               setShowWarriorByIndex={setShowWarriorByIndex}
+              openModalHandler={() => setShowModal(index)}
             />
           :  
             <div 
@@ -80,6 +85,15 @@ export default function Warband (props: Props) {
     }
   }, [warband]);
 
+
+  /**
+   * Modal
+   */
+  const closeModalHandler = () => setShowModal(-1);
+
+  const renderBackdrop = (props: ModalProps) => <div className='backdrop' {...props} />
+
+
   /**
    * Function return
    */
@@ -94,6 +108,22 @@ export default function Warband (props: Props) {
       {renderedWarband}
 
       <WoundChart />
+
+      <Modal
+        className='modal'
+        show={showModal !== -1}
+        onHide={closeModalHandler}
+        renderBackdrop={renderBackdrop}
+      >
+        {
+          warriors?
+            <WarriorCompenentForm
+              warrior={warriors[showModal]}
+            />
+          :
+            <div>Some problem happended</div>
+        }
+      </Modal>
     </div>
   </div>
 }

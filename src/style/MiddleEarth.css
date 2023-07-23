@@ -45,6 +45,7 @@
 .line.name {
   background-color: var(--background-color-dark);
   height: 22px;
+  justify-content: space-between;
 }
 
 .line.name:hover {
@@ -243,4 +244,12 @@
 
 .result-cell {
   background-color: var(--divisors-color);
+}
+
+/* Form */
+.submit-warrior-form {
+  margin-bottom: 10px;
+  color: var(--divisors-color);
+  font-weight: bold;
+  border: var(--spacement) var(--divisors-color) solid;
 }
