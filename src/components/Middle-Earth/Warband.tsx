@@ -25,6 +25,7 @@ export default function Warband (props: Props) {
   const [warriors, setWarriors] = useState<MiddleEarthOperativeType[] | null>(null);
   const [showWarriorByIndex, setShowWarriorByIndex] = useState<number>();
   const [showModal, setShowModal] = useState<number>(-1);
+  // const [saveChanges, setSaveChanges] = useState(false);
 
   /**
    * Handlers
@@ -33,9 +34,32 @@ export default function Warband (props: Props) {
     const index = newIndex === showWarriorByIndex ? -1 : newIndex;
     setShowWarriorByIndex(index);
   }
+
+  const updateWarriorsHandler = (index: number, newWarrior: MiddleEarthOperativeType) => {
+    if (warriors) {
+      const newWarriors = warriors.map(w => w);
+      newWarriors[index] = newWarrior;
+      sessionStorage.setItem('warriors_' + warband, JSON.stringify(newWarriors));
+      setWarriors(newWarriors);
+      closeModalHandler();
+      // setSaveChanges(true);
+    }
+    else {
+      console.log("Warriors list is empty");
+    }
+  }
+
+
+  /**
+   * Modal
+   */
+    const closeModalHandler = () => setShowModal(-1);
+
+    const renderBackdrop = (props: ModalProps) => <div className='backdrop' {...props} />
+  
   
   /**
-   * Elements from component
+   * Component's elements
    */
   const renderedWarband = warriors === null?
     <Spinner message='' />
@@ -61,7 +85,8 @@ export default function Warband (props: Props) {
             </div>
         }
       </div>
-    })
+    });
+
 
   /**
    * Use Effect
@@ -86,12 +111,6 @@ export default function Warband (props: Props) {
   }, [warband]);
 
 
-  /**
-   * Modal
-   */
-  const closeModalHandler = () => setShowModal(-1);
-
-  const renderBackdrop = (props: ModalProps) => <div className='backdrop' {...props} />
 
 
   /**
@@ -104,6 +123,15 @@ export default function Warband (props: Props) {
       <div className='list_row return'>
         <Link to='/MiddleEarth'><SlArrowLeftCircle className='react-icons' /></Link>
       </div>
+
+      {/* {
+        saveChanges?
+          <div>
+            Changes unsaved
+          </div>
+        :
+          null
+      } */}
 
       {renderedWarband}
 
@@ -119,6 +147,8 @@ export default function Warband (props: Props) {
           warriors?
             <WarriorCompenentForm
               warrior={warriors[showModal]}
+              index={showModal}
+              updateWarriors={updateWarriorsHandler}
             />
           :
             <div>Some problem happended</div>

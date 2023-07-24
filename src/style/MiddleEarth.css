@@ -247,9 +247,20 @@
 }
 
 /* Form */
-.submit-warrior-form {
-  margin-bottom: 10px;
+.submit-warrior-button-div {
+  display: flex;
+  justify-content: space-around;
+
+  height: 25px;
+  color: var(--divisors-color);
+  background-color: var(--background-color-dark);
+  font-weight: bold;
+  border: var(--spacement) var(--divisors-color) solid;
+}
+
+.submit-warrior-button-div button {
   color: var(--divisors-color);
   font-weight: bold;
+  background-color: var(--background-color-light);
   border: var(--spacement) var(--divisors-color) solid;
 }

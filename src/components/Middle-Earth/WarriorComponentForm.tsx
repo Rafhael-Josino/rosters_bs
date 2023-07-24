@@ -3,10 +3,13 @@ import { Form } from "react-router-dom";
 import { MiddleEarthOperativeType } from "../../utils/types";
 
 interface Props {
-  warrior: MiddleEarthOperativeType
+  warrior: MiddleEarthOperativeType;
+  index: number;
+  updateWarriors: (index: number, newWarrior: MiddleEarthOperativeType) => void;
 }
 
 export default function WarriorComponent (props: Props) {
+  const { warrior, index, updateWarriors } = props;
   const {
     name,
     hero, 
@@ -18,19 +21,33 @@ export default function WarriorComponent (props: Props) {
     specialRules,
     injuries,
     xp,
-  } = props.warrior;
+  } = warrior;
 
   const [inputName, setInputName] = useState(name);
   const [inputHero, setInputHero] = useState(hero);
   const [inputPoints, setInputPoints] = useState(points);
 
-  return <Form className='warrior-form'>
-    <div className='submit-warrior-form line name'>Confirm</div>
+  /**
+   * Handlers
+   */
+  const submitForm = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
+
+    const newWarrior = JSON.parse(JSON.stringify(warrior));
+    newWarrior.name = inputName;
+    newWarrior.hero = inputHero;
+    newWarrior.points = inputPoints;
+
+    updateWarriors(index, newWarrior);
+  }
+
+  return <Form className='warrior-form-box'>
     <div className="sheet">
       {/* <div className="line name">Name: {name}</div> */}
       <div className="line name">
         Name: 
         <input 
+          required
           value={inputName}
           onChange={event => setInputName(event.target.value)}
         />
@@ -142,6 +159,14 @@ export default function WarriorComponent (props: Props) {
       <div className="divisor horizontal" />
 
       <div className="line">XP: {xp}</div>
+    </div>
+
+    <div className='submit-warrior-button-div'>
+      <button onClick={event => submitForm(event)}>
+        Confirm
+      </button>
+      
+      <button>Cancel</button>
     </div>
   </Form>
 }

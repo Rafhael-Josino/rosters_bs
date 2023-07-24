@@ -22,6 +22,14 @@ export default function WarriorComponent (props: Props) {
     xp,
   } = props.warrior;
 
+  /**
+   * Handlers
+   */
+  const openEditHandler = (event: React.MouseEvent<SVGElement, MouseEvent>) => {
+    event.stopPropagation();
+
+    openModalHandler();
+  }
 
   return <div className="sheet">
     <div 
@@ -30,7 +38,7 @@ export default function WarriorComponent (props: Props) {
     >
       <span>Name: {name}</span>
       <FaFeatherAlt 
-        onClick={openModalHandler}
+        onClick={event => openEditHandler(event)}
       />
     </div>
 
