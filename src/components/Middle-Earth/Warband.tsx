@@ -4,7 +4,7 @@ import Modal from 'react-overlays/Modal';
 import{ ModalProps} from 'react-overlays/cjs/Modal';
 import { SlArrowLeftCircle } from 'react-icons/sl';
 
-import { getWarriors } from '../../apis/AWS_API';
+import { getWarriors, updateWarrior } from '../../apis/AWS_API';
 import { MiddleEarthOperativeType } from '../../utils/types';
 import Header from '../Header';
 import WarriorComponent from './WarriorComponent';
@@ -40,6 +40,7 @@ export default function Warband (props: Props) {
       const newWarriors = warriors.map(w => w);
       newWarriors[index] = newWarrior;
       sessionStorage.setItem('warriors_' + warband, JSON.stringify(newWarriors));
+      updateWarrior(newWarrior);
       setWarriors(newWarriors);
       closeModalHandler();
       // setSaveChanges(true);
