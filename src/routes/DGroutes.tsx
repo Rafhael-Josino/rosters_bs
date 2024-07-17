@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import UnitsList from '../components/DG/UnitsList';
+import LordOfContagion from '../components/DG/Units/LordOfContagion';
 import Leader from '../components/DG/Units/Leader';
 import HeavyGunner from '../components/DG/Units/HeavyGunner';
 import IconBearer from '../components/DG/Units/IconBearer';
@@ -27,6 +28,7 @@ function DGroutes (props: Props) {
             />
           } 
         />
+        <Route path='/Lord Of Contagion' element={<LordOfContagion />} />
         <Route path='/Leader' element={<Leader />} />
         <Route path='/Heavy Gunner' element={<HeavyGunner />} />
         <Route path='/Icon Bearer' element={<IconBearer />} />
