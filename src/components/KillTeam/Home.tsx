@@ -1,41 +1,39 @@
 import { useState, useEffect } from 'react';
-import DGHeader from './DGHeader';
+import { Operatives } from '../../utils/types';
+import Header from './Header';
 import DGroutes from '../../routes/DGroutes';
 
-function DGHome() {
-    const [lifeArray, setLifeArray] = useState([18, 13, 12, 12, 12, 12, 12]);
-    const operatives = [
-        { name: "Lord of Contagion", life: 18, },
-        { name: "Plague Marine Champion", life: 13, },
-        { name: "Heavy Gunner", life: 12, },
-        { name: "Icon Bearer", life: 12, },
-        { name: "Gunner", life: 12, },
-        { name: "Warrior Krak", life: 12, },
-        { name: "Warrior Blight", life: 12, },
-    ];
+type Props = {
+  title: string;
+  operatives: Operatives[];
+}
+
+function Home(props: Props) {
+  const { title, operatives } = props;
+
+    const [lifeArray, setLifeArray] = useState(operatives.map(op => op.life));
 
     const lifeArrayHandler = (index: number, newLife: number) => {
-        const newLifeArray = [
-            ...lifeArray.slice(0, index), 
-            newLife, 
-            ...lifeArray.slice(index+1)
-        ];
+      const newLifeArray = [
+          ...lifeArray.slice(0, index), 
+          newLife, 
+          ...lifeArray.slice(index+1)
+      ];
 
-        sessionStorage.setItem('life_array', String(newLifeArray));
+      sessionStorage.setItem('life_array', String(newLifeArray));
 
-        setLifeArray(newLifeArray);
+      setLifeArray(newLifeArray);
     }
 
-
     useEffect(() => {
-        if (sessionStorage.getItem('life_array')) {
-            setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array') + "]"));
-        }
+      if (sessionStorage.getItem('life_array')) {
+          setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array') + "]"));
+      }
     }, []);
 
     
     return <div>
-        <DGHeader />
+        <Header title={title}/>
 
         <div className='battlescribe'>
           <DGroutes 
@@ -46,7 +44,7 @@ function DGHome() {
         </div>
         
         <br />
-        
+
         <div className="summary battlescribe">
             <div className='list_header'>Selection Rules</div>
             <br />
@@ -94,4 +92,4 @@ function DGHome() {
     </div>
 }
 
-export default DGHome;
+export default Home;

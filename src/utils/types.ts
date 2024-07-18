@@ -1,3 +1,8 @@
+export interface Operatives {
+  name: string;
+  life: number;
+}
+
 export interface UserType {
   name: string;
   //password: string (hash)
