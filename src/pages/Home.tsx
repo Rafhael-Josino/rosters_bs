@@ -5,9 +5,9 @@ import Header from '../components/Header';
 
 function Home() {
   return <div>
-    <Header title='Tabela de Dano' />
+    <Header title='Custom Kill Teams' />
 
-    <div className='rosters_list' style={{'backgroundColor': 'yellowgreen'}}>
+    <div className='rosters_list'>
       <Link
         state={{ 'align-itens': 'center' }} 
         to="DeathGuard">Death Guard <GiRadioactive /></Link>
@@ -29,7 +29,7 @@ function Home() {
     </div> */}
 
     <div className='footnote'>
-        Uses lists created with: <a href="https://www.battlescribe.net">BattleScribe</a>
+        Uses format from: <a href="https://www.battlescribe.net">BattleScribe</a>
     </div>
   </div>
 }

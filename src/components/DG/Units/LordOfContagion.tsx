@@ -22,35 +22,46 @@ function Leader() {
             </p>
             <br />
             <table cellSpacing="-1">
-                <tbody><tr>
-                    <th>Abilities</th>
-                    <th>Ability</th>
+              <tbody>
+                <tr>
+                  <th>Abilities</th><th>Ability</th>
                 </tr>
                 <tr>
-                    <td className="profile-name">Disgustingly Resilient</td>
-                    <td>Each time this operative would lose a wound, roll one D6: on a 6+, that would is not lost. This operative cannot be injured.</td>
+                  <td className="profile-name">Disgustingly Resilient</td>
+                  <td>Each time this operative would lose a wound, roll one D6: on a 6+, that would is not lost. This operative cannot be injured.</td>
                 </tr>
-            </tbody></table>
+                <tr>
+                  <td className="profile-name">Terminator Armor</td>
+                  <td>This operative has an Invulnarable Save of 5+ and cannot perform the Dash action in his activation, unless by the effect of other ability.</td>
+                </tr>
+                <tr>
+                  <td className="profile-name">Deep Strike (2AP)</td>
+                  <td>This operative does not need to be deployed in the game start...</td>
+                </tr>
+              </tbody>
+            </table>
             <table cellSpacing="-1">
-                <tbody><tr>
-                    <th>Operative</th>
-                    <th>M</th><th>APL</th><th>GA</th><th>DF</th><th>SV</th><th>W</th>
+              <tbody>
+                <tr>
+                  <th>Operative</th><th>M</th><th>APL</th><th>GA</th><th>DF</th><th>SV</th><th>W</th>
                 </tr>
                 <tr>
-                    <td className="profile-name">Plague Marine Champion</td>
-                    <td>2⬤</td><td>3</td><td>1</td><td>3</td><td>3+</td><td>13</td>
+                  <td className="profile-name">Plague Marine Champion</td>
+                  <td>2⬤</td><td>3</td><td>1</td><td>3</td><td>3+/5++</td><td>18</td>
                 </tr>
-            </tbody></table>
+              </tbody>
+            </table>
             <table cellSpacing="-1">
-                <tbody><tr>
-                    <th>Weapons</th>
-                    <th>A</th><th>WS/BS</th><th>D</th><th>SR</th><th>!</th>
+              <tbody>
+                <tr>
+                  <th>Weapons</th><th>A</th><th>WS/BS</th><th>D</th><th>SR</th><th>!</th>
                 </tr>
                 <tr>
-                    <td className="profile-name">⚔ Plague Axe</td>
-                    <td>5</td><td>3+</td><td>5/6</td><td>!Reap1, !Rending, Brutal, Ceaseless</td><td>-</td>
+                  <td className="profile-name">⚔ Plague Axe</td>
+                  <td>5</td><td>3+</td><td>5/6</td><td>Brutal, Ceaseless</td><td>Reap 1, Rending</td>
                 </tr>
-            </tbody></table>
+              </tbody>
+            </table>
       </div>
     </div>
 }

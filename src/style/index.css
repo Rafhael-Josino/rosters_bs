@@ -1,9 +1,15 @@
-* {
-    box-sizing: border-box;
+:root {
+  --KTorange: #eb854a;
+  --KTblack: #3c3c3c;
 }
 
+* {
+    box-sizing: border-box;
+  }
+  
 body {
     margin: 0;
+    background-color: var(--KTblack);
     padding: 0;
     width: 100vw;
 }
@@ -19,9 +25,10 @@ a:-webkit-any-link {
 
 /* Header */
 .header {
-    background-color: orange;
+    background-color: var(--KTorange);
+    color: var(--KTblack);
     width: 100%;
-    height: 150px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,14 +41,14 @@ a:-webkit-any-link {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: white;
+    color: var(--KTblack);
     font-size: xxx-large;
     text-align: right;
 }
 
 
 .footnote {
-    background-color: orange;
+    background-color: var(--KTorange);
     color: white;
     width: 100%;
     height: 2rem;
