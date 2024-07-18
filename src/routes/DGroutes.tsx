@@ -29,7 +29,7 @@ function DGroutes (props: Props) {
           } 
         />
         <Route path='/Lord Of Contagion' element={<LordOfContagion />} />
-        <Route path='/Leader' element={<Leader />} />
+        <Route path='/Plague Marine Champion' element={<Leader />} />
         <Route path='/Heavy Gunner' element={<HeavyGunner />} />
         <Route path='/Icon Bearer' element={<IconBearer />} />
         <Route path='/Gunner' element={<Gunner />} />

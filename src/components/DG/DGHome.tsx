@@ -6,7 +6,7 @@ function DGHome() {
     const [lifeArray, setLifeArray] = useState([18, 13, 12, 12, 12, 12, 12]);
     const operatives = [
         { name: "Lord of Contagion", life: 18, },
-        { name: "Leader", life: 13, },
+        { name: "Plague Marine Champion", life: 13, },
         { name: "Heavy Gunner", life: 12, },
         { name: "Icon Bearer", life: 12, },
         { name: "Gunner", life: 12, },

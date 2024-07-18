@@ -198,6 +198,14 @@ div.battlescribe span.caps {
     color: var(--KTblack);
 }
 
+.rosters_list a {
+  color: var(--KTblack);
+}
+
+a {
+  color: white;
+}
+
 .list_header {
     font-weight: bold;
 }

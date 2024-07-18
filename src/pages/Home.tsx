@@ -10,7 +10,10 @@ function Home() {
     <div className='rosters_list'>
       <Link
         state={{ 'align-itens': 'center' }} 
-        to="DeathGuard">Death Guard <GiRadioactive /></Link>
+        to="DeathGuard"
+      >
+        Death Guard <GiRadioactive />
+      </Link>
     </div>
 
     {/* <div className='rosters_list' style={{'backgroundColor': 'yellowgreen'}}>

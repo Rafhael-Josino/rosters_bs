@@ -46,6 +46,10 @@ a:-webkit-any-link {
     text-align: right;
 }
 
+.header-logo img {
+  height: 180px;
+}
+
 
 .footnote {
     background-color: var(--KTorange);
