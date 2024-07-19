@@ -2,17 +2,17 @@ import { Routes, Route } from 'react-router-dom';
 
 import UnitsList from './UnitsList';
 import LordOfContagion from './Units/LordOfContagion';
-import Leader from './Units/Leader';
-import HeavyGunner from './Units/HeavyGunner';
-import IconBearer from './Units/IconBearer';
-import Gunner from './Units/Gunner';
-import WarriorKrak from './Units/WarriorKrak';
-import WarriorBlight from './Units/WarriorBlight';
+// import Leader from './Units/Leader';
+// import HeavyGunner from './Units/HeavyGunner';
+// import IconBearer from './Units/IconBearer';
+// import Gunner from './Units/Gunner';
+// import WarriorKrak from './Units/WarriorKrak';
+// import WarriorBlight from './Units/WarriorBlight';
 
 type Props = {
     lifeArray: number[],
     lifeArrayHandler: (index: number, newLife: number) => void,
-    operatives: { name: string, life: number}[]
+    operatives: { name: string, life: number }[]
 }
 
 function DGroutes (props: Props) {
