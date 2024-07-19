@@ -29,10 +29,8 @@ function Home(props: Props) {
       if (sessionStorage.getItem('life_array'+title)) {
           setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array'+title) + "]"));
       }
-    }, []);
+    }, [title]);
 
-
-    
     return <div>
         <Header title={title}/>
 
