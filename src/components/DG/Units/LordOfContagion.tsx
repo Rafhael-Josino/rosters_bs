@@ -4,7 +4,7 @@ import { SlArrowLeftCircle } from 'react-icons/sl';
 function Leader() {
     return <div>
          <div className='list_row return'>
-            <Link to='/DeathGuard/'><SlArrowLeftCircle className='react-icons' /></Link>
+            <Link to='/Death Guard/'><SlArrowLeftCircle className='react-icons' /></Link>
         </div>
         <div className="rootselection">
             <h4>Lord of Contagion</h4>

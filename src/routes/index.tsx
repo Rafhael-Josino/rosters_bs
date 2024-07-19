@@ -8,8 +8,8 @@ import KillTeamHome from '../components/KillTeam/Home';
 function routes() {
   return <Routes>
     <Route path='/*' element={<Home />} />
-    <Route path='/DeathGuard/*' element={<KillTeamHome title='Death Guard' operatives={DeathGuardOps} />} />
-    <Route path='/IronWarriors/*' element={<KillTeamHome title='Iron Warriors' operatives={IronWarriorsOps} />} />
+    <Route path='/Death Guard/*' element={<KillTeamHome title='Death Guard' operatives={DeathGuardOps} />} />
+    <Route path='/Iron Warriors/*' element={<KillTeamHome title='Iron Warriors' operatives={IronWarriorsOps} />} />
     {/* <Route path='/MiddleEarth/*' element={<ChartContainer />} /> */}
   </Routes>
 }

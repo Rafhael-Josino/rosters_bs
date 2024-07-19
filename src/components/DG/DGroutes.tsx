@@ -22,7 +22,8 @@ function DGroutes (props: Props) {
         <Route 
           path='/*' 
           element={
-            <UnitsList 
+            <UnitsList
+              title="Death Guard"
               lifeArray={lifeArray} 
               lifeArrayHandler={lifeArrayHandler}
               operatives={operatives}
@@ -30,12 +31,12 @@ function DGroutes (props: Props) {
           } 
         />
         <Route path='/Lord Of Contagion' element={<LordOfContagion />} />
-        <Route path='/Plague Marine Champion' element={<Leader />} />
+        {/* <Route path='/Plague Marine Champion' element={<Leader />} />
         <Route path='/Heavy Gunner' element={<HeavyGunner />} />
         <Route path='/Icon Bearer' element={<IconBearer />} />
         <Route path='/Gunner' element={<Gunner />} />
         <Route path='/Warrior Krak' element={<WarriorKrak />} />
-        <Route path='/Warrior Blight' element={<WarriorBlight />} />
+        <Route path='/Warrior Blight' element={<WarriorBlight />} /> */}
     </Routes>
 }
 

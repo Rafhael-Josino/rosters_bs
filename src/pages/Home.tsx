@@ -10,7 +10,7 @@ function Home() {
     <div className='rosters_list'>
       <Link
         state={{ 'align-itens': 'center' }} 
-        to="DeathGuard"
+        to="Death Guard"
       >
         Death Guard
       </Link>
@@ -19,7 +19,7 @@ function Home() {
     <div className='rosters_list'>
       <Link
         state={{ 'align-itens': 'center' }} 
-        to="IronWarriors"
+        to="Iron Warriors"
       >
         Iron Warriors
       </Link>
