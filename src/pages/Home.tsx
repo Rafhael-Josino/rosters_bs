@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GiRadioactive } from 'react-icons/gi';
+// import { GiRadioactive } from 'react-icons/gi';
 // import { FaRing } from 'react-icons/fa';
 import Header from '../components/Header';
 
@@ -12,7 +12,16 @@ function Home() {
         state={{ 'align-itens': 'center' }} 
         to="DeathGuard"
       >
-        Death Guard <GiRadioactive />
+        Death Guard
+      </Link>
+    </div>
+
+    <div className='rosters_list'>
+      <Link
+        state={{ 'align-itens': 'center' }} 
+        to="IronWarriors"
+      >
+        Iron Warriors
       </Link>
     </div>
 

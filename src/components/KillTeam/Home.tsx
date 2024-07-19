@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Operatives } from '../../utils/types';
 import Header from './Header';
-import DGroutes from '../../routes/DGroutes';
+import Routes from './Routes';
 
 type Props = {
   title: string;
@@ -20,23 +20,25 @@ function Home(props: Props) {
           ...lifeArray.slice(index+1)
       ];
 
-      sessionStorage.setItem('life_array', String(newLifeArray));
+      sessionStorage.setItem('life_array'+title, String(newLifeArray));
 
       setLifeArray(newLifeArray);
     }
 
     useEffect(() => {
-      if (sessionStorage.getItem('life_array')) {
-          setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array') + "]"));
+      if (sessionStorage.getItem('life_array'+title)) {
+          setLifeArray(JSON.parse("[" + sessionStorage.getItem('life_array'+title) + "]"));
       }
     }, []);
+
 
     
     return <div>
         <Header title={title}/>
 
         <div className='battlescribe'>
-          <DGroutes 
+          <Routes
+            title={title}
             lifeArray={lifeArray} 
             lifeArrayHandler={lifeArrayHandler} 
             operatives={operatives}    
@@ -45,7 +47,7 @@ function Home(props: Props) {
         
         <br />
 
-        <div className="summary battlescribe">
+        {/* <div className="summary battlescribe">
             <div className='list_header'>Selection Rules</div>
             <br />
             <p>
@@ -88,7 +90,7 @@ function Home(props: Props) {
                     Each time a friendly operative makes a shooting attack with this weapon, only operatives within x are a valid target. x is the distance after the weapon's Rng, e.g. Rng ⬟. All other rules for selecting a valid target still apply.
                     ()
             </p>
-        </div>
+        </div> */}
     </div>
 }
 

@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import UnitsList from '../components/DG/UnitsList';
-import LordOfContagion from '../components/DG/Units/LordOfContagion';
-import Leader from '../components/DG/Units/Leader';
-import HeavyGunner from '../components/DG/Units/HeavyGunner';
-import IconBearer from '../components/DG/Units/IconBearer';
-import Gunner from '../components/DG/Units/Gunner';
-import WarriorKrak from '../components/DG/Units/WarriorKrak';
-import WarriorBlight from '../components/DG/Units/WarriorBlight';
+
+import UnitsList from './UnitsList';
+import LordOfContagion from './Units/LordOfContagion';
+import Leader from './Units/Leader';
+import HeavyGunner from './Units/HeavyGunner';
+import IconBearer from './Units/IconBearer';
+import Gunner from './Units/Gunner';
+import WarriorKrak from './Units/WarriorKrak';
+import WarriorBlight from './Units/WarriorBlight';
 
 type Props = {
     lifeArray: number[],
