@@ -8,9 +8,9 @@ function Header(props: Props) {
                 </div>
                 <div className="header-bottom">
                     <div className="header-menu">
-                    <div className="header-info">
-                        <div className="header-title">{props.title}</div>
-                    </div>
+                      <div className="header-info">
+                          <div className="header-title">{props.title}</div>
+                      </div>
                     </div>
                 </div>
             </div>

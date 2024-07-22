@@ -4,6 +4,7 @@
 :root {
   --KTorange: #eb854a;
   --KTblack: #3c3c3c;
+  --KTgray: #515a5c;
 }
 
 div.battlescribe {
@@ -50,9 +51,12 @@ div.battlescribe h4 {
 }
 
 div.battlescribe div.summary {
+    width: 100%;
     margin: 16px 0px 0px 0px;
-    padding: 0px;
+    padding: 6px;
     border-width: 2px;
+    border-style: solid;
+    border-color: var(--KTorange);
 }
 
 div.battlescribe ul {
@@ -187,7 +191,9 @@ div.battlescribe span.caps {
     font-variant: small-caps;
 }
 
+/* ------------------------ */
 /* My edit */
+/* ------------------------ */
 
 .rosters_list {
     font-size: xx-large;
@@ -206,8 +212,33 @@ a {
   color: white;
 }
 
+.faction_header {
+  color: var(--KTorange);
+  font-weight: bold;
+}
+
+.faction_box {
+  height: 1.6rem;
+  margin: .5rem 0 .5rem 0;
+  padding: 2px 4px 0 4px;
+  background-color: var(--KTgray);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faction_box span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .list_header {
     font-weight: bold;
+}
+
+.list_header div {
+  color: var(--KTorange);
 }
 
 .unitList {

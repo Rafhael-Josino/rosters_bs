@@ -44,6 +44,8 @@ a:-webkit-any-link {
     color: var(--KTblack);
     font-size: xxx-large;
     text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-logo img {
