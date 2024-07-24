@@ -271,6 +271,14 @@ a {
     padding: 0 .5rem 0 .5rem;
 }
 
+.unit_row {
+  background-color: var(--KTgray);
+  height: 1.5rem;
+  align-items: center;
+  padding: 0 .2rem 0 .2rem;
+  margin-bottom: -.5rem;
+}
+
 .damage:hover {
     cursor: pointer;
     color: red;

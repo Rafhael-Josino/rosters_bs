@@ -33,14 +33,14 @@ function UnitsList(props: Props) {
             color = 'orange';
         }
         
-        return <div className='list_row' key={index}>
-            <div className='unit deathguard_unit'>
+        return <div className='list_row unit_row' key={index}>
+            <div>
                 <Link style={{ 'color': color }} to={`/${title}/${op.name}`}>
                   {op.name}{status}
                 </Link>
             </div>
             <div>
-                {lifeArray[index]} / {op.life}--
+                {lifeArray[index]} / {op.life}-
 
                 <button 
                     className='damage'
@@ -67,7 +67,6 @@ function UnitsList(props: Props) {
         </div>
         <div className='list_row list_header'>
           <div>OPERATIVES</div>
-          <div>LIFE</div>
         </div>
         {renderedOperatives}
     </div>

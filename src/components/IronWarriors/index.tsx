@@ -4,9 +4,9 @@ import Header from '../KillTeam/Header';
 import UnitsList from '../KillTeam/UnitsList';
 import Operatives from './Operatives';
 import Warsmith from './Units/Warsmith';
+import Warpsmith from './Units/Warpsmith';
 
 function Home () {
-
   const [lifeArray, setLifeArray] = useState(Operatives.map(op => op.life));
 
   const lifeArrayHandler = (index: number, newLife: number) => {
@@ -45,15 +45,16 @@ function Home () {
             } 
           />
           <Route path='/Warsmith' element={<Warsmith />} />
+          <Route path='/Warpsmith' element={<Warpsmith />} />
         </Routes>
         <br/>
         <div className="summary battlescribe">
-          <div className='faction_header'>ABILITY</div>
+          <div className='faction_header'>FACTION ABILITIES</div>
           <div className='faction_box'>
             <span>SIEGE LORDS</span>
           </div>
           <p>
-            When determining Line of Sight for each friendly Iron Warriors operative, enemy operatives within 6" of it are treated as having an Engage order unless they are in Cover from Heavy Terrain.
+            When determining Line of Sight for each friendly Iron Warriors operative, enemy operatives within ⬟ of it are treated as having an Engage order unless they are in Cover from Heavy Terrain.
           </p>
           <br/>
 
