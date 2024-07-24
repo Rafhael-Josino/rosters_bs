@@ -26,9 +26,8 @@ function UnitsList(props: Props) {
         if (!lifeArray[index]) {
             status = <GiDeathSkull />;
             color = 'red';
-            // status_css = 'down';
         } 
-        else if ((lifeArray[index] <= op.life / 2) && !injuryImmunity) {
+        else if ((lifeArray[index] < op.life / 2) && !injuryImmunity) {
             status = <span>(injured)</span>;
             color = 'orange';
         }

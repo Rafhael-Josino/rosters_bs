@@ -7,6 +7,7 @@ import UnitsList from '../KillTeam/UnitsList';
 import Operatives from './Operatives';
 import Warsmith from './Units/Warsmith';
 import Warpsmith from './Units/Warpsmith';
+import Havoc from './Units/Havoc';
 
 function Home () {
   const [lifeArray, setLifeArray] = useState(Operatives.map(op => op.life));
@@ -190,6 +191,7 @@ function Home () {
         />
         <Route path='/Warsmith' element={<Warsmith />} />
         <Route path='/Warpsmith' element={<Warpsmith />} />
+        <Route path='/Havoc' element={<Havoc />} />
       </Routes>
 
       <br/>
