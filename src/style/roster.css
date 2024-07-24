@@ -223,6 +223,9 @@ a {
 .faction_header {
   color: var(--KTorange);
   font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .faction_box {
