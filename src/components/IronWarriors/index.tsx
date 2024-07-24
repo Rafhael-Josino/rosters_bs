@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from '../KillTeam/Header';
 import UnitsList from '../KillTeam/UnitsList';
 import Operatives from './Operatives';
+import Warsmith from './Units/Warsmith';
 
 function Home () {
 
@@ -43,7 +44,7 @@ function Home () {
               />
             } 
           />
-          {/* <Route path='/Lord Of Contagion' element={<LordOfContagion />} /> */}
+          <Route path='/Warsmith' element={<Warsmith />} />
         </Routes>
         <br/>
         <div className="summary battlescribe">

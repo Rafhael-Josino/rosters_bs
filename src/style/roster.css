@@ -109,7 +109,7 @@ div.battlescribe p {
 }
 
 div.battlescribe table {
-    margin: 8px 0px 0px 16px;
+    margin-bottom: .5rem;
     padding: 0px;
     border-collapse: collapse;
     
@@ -119,10 +119,18 @@ div.battlescribe table {
     page-break-inside: avoid;
 }
 
+div.battlescribe table.ability-weapons {
+  margin-top: .5rem;
+}
+
 div.battlescribe tr {
     border-width: 1px;
     border-style: solid;
     border-color: var(--KTorange);
+}
+
+div.battlescribe tr.table-header {
+  background-color: var(--KTgray);
 }
 
 div.battlescribe th {
@@ -138,9 +146,9 @@ div.battlescribe td {
     padding: 4px;
     margin: 0px;
     border-width: 0px;
-    
     text-align: left;
 }
+
 
 div.battlescribe td.profile-name {
     font-weight: bold;
@@ -261,10 +269,6 @@ a {
 .unit {
     border-radius: .5rem;
     padding: 0 .5rem 0 .5rem;
-}
-
-.down {
-    color: red;
 }
 
 .damage:hover {
