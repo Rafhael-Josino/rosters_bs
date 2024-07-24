@@ -8,34 +8,36 @@ type Props = {
     title: string,
     lifeArray: number[],
     lifeArrayHandler: (index: number, newLife: number) => void,
-    operatives: { name: string, life: number}[]
+    operatives: { name: string, life: number}[],
+    injuryImmunity: boolean,
 }
 
 function UnitsList(props: Props) {
-    const { title, lifeArray, lifeArrayHandler, operatives } = props;
+    const { title, lifeArray, lifeArrayHandler, operatives, injuryImmunity } = props;
 
     const woundHandler = (index: number, newLife: number, maxLife: number) => {
         if (newLife >=0 && newLife <= maxLife) lifeArrayHandler(index, newLife);
     }
 
     const renderedOperatives = operatives.map((op, index) => {
-        // General edits
         let status: JSX.Element = <span></span>;
-        let status_css: string = '';
+        let color: string = 'white';
 
         if (!lifeArray[index]) {
             status = <GiDeathSkull />;
-            status_css = 'down';
+            color = 'red';
+            // status_css = 'down';
         } 
-        else if(lifeArray[index] <= op.life / 2) {
-            status = <span>injured</span>;
-            // nameStyle = { 'color': 'orange' };
+        else if ((lifeArray[index] <= op.life / 2) && !injuryImmunity) {
+            status = <span>(injured)</span>;
+            color = 'orange';
         }
         
-        // deathguard_unit class ???
         return <div className='list_row' key={index}>
             <div className='unit deathguard_unit'>
-                <Link className={status_css} to={`/${title}/${op.name}`}>{op.name}{status}</Link>
+                <Link style={{ 'color': color }} to={`/${title}/${op.name}`}>
+                  {op.name}{status}
+                </Link>
             </div>
             <div>
                 {lifeArray[index]} / {op.life}--

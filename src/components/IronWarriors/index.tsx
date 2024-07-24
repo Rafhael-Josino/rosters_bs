@@ -35,10 +35,11 @@ function Home () {
             path='/*' 
             element={
               <UnitsList
-              title="Iron Warriors"
-              lifeArray={lifeArray} 
-              lifeArrayHandler={lifeArrayHandler}
-              operatives={Operatives}
+                title="Iron Warriors"
+                lifeArray={lifeArray} 
+                lifeArrayHandler={lifeArrayHandler}
+                operatives={Operatives}
+                injuryImmunity={false}
               />
             } 
           />
