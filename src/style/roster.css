@@ -292,10 +292,20 @@ a {
     margin-bottom: -0.5rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 525px) {
     div.battlescribe {
-        width: 100vw;
+        width: 100%;
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    div.battlescribe div.rootselection {
+      overflow-x: scroll;
+    }
+}
+
+@media (max-width: 410px) {
+  div.faction_box span {
+    font-size: 12px;
+  }
 }

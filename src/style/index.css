@@ -11,7 +11,7 @@ body {
     margin: 0;
     background-color: var(--KTblack);
     padding: 0;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 a:-webkit-any-link {
@@ -104,12 +104,7 @@ a:-webkit-any-link {
 }
 
 
-@media (max-width: 500px) {
-    .header,
-    .footnote {
-        width: 100vw;
-    }
-
+@media (max-width: 525px) {
     .container-header {
         width: 100%;
     }
