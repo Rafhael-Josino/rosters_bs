@@ -8,6 +8,7 @@ import Operatives from './Operatives';
 import Warsmith from './Units/Warsmith';
 import Warpsmith from './Units/Warpsmith';
 import Havoc from './Units/Havoc';
+import Obliterator from './Units/Obliterator';
 
 function Home () {
   const [lifeArray, setLifeArray] = useState(Operatives.map(op => op.life));
@@ -192,6 +193,7 @@ function Home () {
         <Route path='/Warsmith' element={<Warsmith />} />
         <Route path='/Warpsmith' element={<Warpsmith />} />
         <Route path='/Havoc' element={<Havoc />} />
+        <Route path='/Obliterator' element={<Obliterator />} />
       </Routes>
 
       <br/>

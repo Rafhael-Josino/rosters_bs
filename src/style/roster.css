@@ -149,7 +149,6 @@ div.battlescribe td {
     text-align: left;
 }
 
-
 div.battlescribe td.profile-name {
     font-weight: bold;
 }
@@ -186,6 +185,28 @@ div.battlescribe table.statistics td {
     border-color: #BBBBBB;
     text-align: right;
 }
+
+/* Obliterator */
+div.chaotic_engineering {
+  display: flex;
+  justify-content: center;
+  padding-top: .5rem;
+}
+
+div.chaotic_engineering td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--KTorange);
+}
+
+td.td-header  {
+  background-color: var(--KTgray);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--KTorange);
+}
+
+/* ------------------------------- */
 
 div.battlescribe span.bold {
     font-weight: bold;
