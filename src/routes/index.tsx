@@ -6,10 +6,11 @@ import ChartContainer from '../components/ChartContainer';
 
 function routes() {
   return <Routes>
-    <Route path='/*' element={<Home />} />
+    {/* <Route path='/*' element={<Home />} /> */}
     {/* <Route path='/Iron Warriors/*' element={<IronWarriors />} />
     <Route path='/Death Guard/*' element={<DeathGuard />} /> */}
-    <Route path='/MiddleEarth/*' element={<ChartContainer />} />
+    {/* <Route path='/MiddleEarth/*' element={<ChartContainer />} /> */}
+    <Route path='/*' element={<ChartContainer />} />
   </Routes>
 }
 
