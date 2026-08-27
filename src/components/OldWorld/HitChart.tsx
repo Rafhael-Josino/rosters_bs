@@ -14,16 +14,16 @@ export default function WoundChart() {
   }
 
   return <div className='wound-chart'>
-    Hit Chart (Weapon Skill's):
+    Hit Chart:
     
     <div className='wound-chart-div-1'>
-      <div>Defender</div>
+      <div>Defender (Ws)</div>
       
       <div className='wound-chart-div-2'>
         <FaRegHandPointDown className='wound-chart-down-hand' />
         <FaRegHandPointRight className='wound-chart-right-hand' />
 
-        <div className='wound-chart-strength-title'>
+        <div className='hit-chart-strength-title'>
           <div>A</div>
           <div>t</div>
           <div>t</div>
@@ -32,6 +32,8 @@ export default function WoundChart() {
           <div>k</div>
           <div>e</div>
           <div>r</div>
+          <div>-</div>
+          <div>Ws</div>
         </div>
         <table className='wound-chart-table' style={{margin:'0'}}>
           <tbody>

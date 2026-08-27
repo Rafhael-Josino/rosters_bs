@@ -223,6 +223,12 @@ div.old-world, .old-world.title header {
   margin-top: 5px;
 }
 
+.hit-chart-strength-title {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
 .wound-chart-down-hand {
   position: absolute;
   margin-left: 5px;
@@ -236,6 +242,10 @@ div.old-world, .old-world.title header {
 }
 
 .wound-chart-strength-title div {
+  text-align: center;
+}
+
+.hit-chart-strength-title div {
   text-align: center;
 }
 
