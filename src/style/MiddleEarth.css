@@ -2,11 +2,15 @@
   --spacement: 2px;
   --background-color-dark: rgb(177, 167, 169);
   --background-color-light: rgb(167, 155, 155);
-  --background-color-light-old: rgb(124, 124, 32);
-  --divisors-color: rgb(200, 5, 5);
+  --background-color-light-old: rgb(207, 207, 98);
+  --divisors-color: rgb(144, 3, 3);
 }
 
 /* Home page */
+
+.old-world.title header {
+  color: var(--divisors-color);
+}
 
 .warband-title {
   display: flex;

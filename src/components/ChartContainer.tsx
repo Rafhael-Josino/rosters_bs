@@ -6,7 +6,7 @@ import WoundChart from './OldWorld/WoundChart';
 import HitChart from './OldWorld/HitChart';
 
 export default function ChartContainer() {
-  return <div>
+  return <div className='old-world'>
     <Header title='Old World Charts' />
 
     <div className='battlescribe'>
@@ -17,6 +17,7 @@ export default function ChartContainer() {
       <HitChart />
       <p/>
       <WoundChart />
+      <p/>
     </div>
   </div>
 }
