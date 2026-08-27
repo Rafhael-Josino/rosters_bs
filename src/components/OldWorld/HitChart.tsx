@@ -14,7 +14,7 @@ export default function WoundChart() {
   }
 
   return <div className='wound-chart'>
-    Hit Chart:
+    Hit Chart (Weapon Skill's):
     
     <div className='wound-chart-div-1'>
       <div>Defender</div>

@@ -2,9 +2,10 @@
 
 /* custom colors */
 :root {
-  --KTorange: rgb(207, 207, 98);
+  --KTorange: rgb(223, 223, 134);
   --KTblack: #3c3c3c;
   --KTgray: #515a5c;
+  --OldWorldRed: rgb(144, 3, 3);
 }
 
 div.battlescribe {
@@ -19,7 +20,7 @@ div.battlescribe {
     
     font-family: sans-serif;
     font-size: large;
-    color: white;
+    color: var(--OldWorldRed);
     text-align: left;
 }
 
