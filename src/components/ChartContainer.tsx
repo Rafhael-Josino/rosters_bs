@@ -3,6 +3,7 @@
 import Header from './Header';
 // import WoundChart from './Middle-Earth/WoundChart';
 import WoundChart from './OldWorld/WoundChart';
+import HitChart from './OldWorld/HitChart';
 
 export default function ChartContainer() {
   return <div>
@@ -13,6 +14,8 @@ export default function ChartContainer() {
         <Link to='/'><SlArrowLeftCircle className='react-icons' /></Link>
       </div> */}
 
+      <HitChart />
+      <p/>
       <WoundChart />
     </div>
   </div>
