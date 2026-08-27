@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
+// import Home from '../pages/Home';
 // import IronWarriors from '../components/IronWarriors';
 // import DeathGuard from '../components/DeathGuard';
 import ChartContainer from '../components/ChartContainer';
