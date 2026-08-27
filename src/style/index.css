@@ -1,6 +1,7 @@
 :root {
   --KTorange: #eb854a;
   --KTblack: #3c3c3c;
+  --OldWorldRed: rgb(144, 3, 3);
 }
 
 * {
@@ -26,7 +27,7 @@ a:-webkit-any-link {
 /* Header */
 .header {
     background-color: var(--KTorange);
-    color: var(--KTblack);
+    color: var(--OldWorldRed);
     width: 100%;
     height: 200px;
     display: flex;

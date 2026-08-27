@@ -1,8 +1,9 @@
 :root {
   --spacement: 2px;
+  --status-background-color: rgb(223, 223, 134);
   --background-color-dark: rgb(177, 167, 169);
   --background-color-light: rgb(167, 155, 155);
-  --background-color-light-old: rgb(207, 207, 98);
+  --background-color-light-old: rgb(223, 223, 134);
   --divisors-color: rgb(144, 3, 3);
 }
 
@@ -231,7 +232,7 @@
 }
 
 .header-table {
-  background-color: var(--background-color-dark);
+  background-color: var(--status-background-color);
 }
 
 .header-table:hover {
@@ -239,7 +240,7 @@
 }
 
 .empty-cell {
-  background-color: var(--background-color-light);
+  background-color: var(--status-background-color);
 }
 
 .selected-row, .selected-column {
