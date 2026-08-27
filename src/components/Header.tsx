@@ -4,11 +4,9 @@ interface Props {
 }
 
 function Header(props: Props) {
-  const { title, color } = props;
+  const { title } = props;
 
-  const headerColor = color? color : 'orange';
-
-  return <header className="header" style={{backgroundColor: headerColor}}>
+  return <header className="header">
     <div className="container-header">
       {title}
     </div>
