@@ -1,11 +1,12 @@
 // import { Link } from 'react-router-dom';
 // import { SlArrowLeftCircle } from 'react-icons/sl';
 import Header from './Header';
-import WoundChart from './Middle-Earth/WoundChart';
+// import WoundChart from './Middle-Earth/WoundChart';
+import WoundChart from './OldWorld/WoundChart';
 
 export default function ChartContainer() {
   return <div>
-    <Header title='Battle Company' />
+    <Header title='Old World Charts' />
 
     <div className='battlescribe'>
       {/* <div className='list_row return'>
