@@ -226,16 +226,14 @@ div.battlescribe span.caps {
 /* ------------------------ */
 
 .rosters_list {
-    font-size: xx-large;
-    border-radius: 0;
-    text-align: center;
-    margin-top: 1rem;
-    background-color: var(--KTorange);
-    color: var(--KTblack);
+  font-size: xx-large;
+  border-radius: 0;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .rosters_list a {
-  color: var(--KTblack);
+  color: rgb(144, 3, 3);
 }
 
 a {
@@ -289,30 +287,31 @@ a {
 .list_row.return {
     justify-content: center;
     margin-bottom: 1rem;
-}
-
-.unit {
+  }
+  
+  .unit {
     border-radius: .5rem;
     padding: 0 .5rem 0 .5rem;
-}
-
-.unit_row {
-  background-color: var(--KTgray);
-  height: 1.5rem;
-  align-items: center;
-  padding: 0 .2rem 0 .2rem;
-  margin-bottom: -.5rem;
-}
-
-.damage:hover {
+  }
+  
+  .unit_row {
+    background-color: var(--KTgray);
+    height: 1.5rem;
+    align-items: center;
+    padding: 0 .2rem 0 .2rem;
+    margin-bottom: -.5rem;
+  }
+  
+  .damage:hover {
     cursor: pointer;
     color: red;
-}
-
-.react-icons {
+  }
+  
+  .react-icons {
     font-size: x-large;
     margin-bottom: -0.5rem;
-}
+    color:rgb(144, 3, 3);
+  }
 
 @media (max-width: 525px) {
     div.battlescribe {

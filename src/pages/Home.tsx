@@ -1,13 +1,33 @@
 import { Link } from 'react-router-dom';
-// import { GiRadioactive } from 'react-icons/gi';
-// import { FaRing } from 'react-icons/fa';
+import { FaRegHandPointRight } from 'react-icons/fa'
 import Header from '../components/Header';
 
+
 function Home() {
-  return <div>
-    <Header title='Custom Kill Teams' />
+  return <div className='old-world'>
+    <Header title='Dynamic Charts' />
 
     <div className='rosters_list'>
+      <Link
+        state={{ 'align-itens': 'center' }} 
+        to="MiddleEarth"
+      >
+        <FaRegHandPointRight />
+        MESBG Wound Chart
+      </Link>
+    </div>
+
+    <div className='rosters_list'>
+      <Link
+        state={{ 'align-itens': 'center' }} 
+        to="OldWorld"
+      >
+        <FaRegHandPointRight />
+        Old World Charts
+      </Link>
+    </div>
+
+    {/* <div className='rosters_list'>
       <Link
         state={{ 'align-itens': 'center' }} 
         to="Death Guard"
@@ -23,7 +43,7 @@ function Home() {
       >
         Iron Warriors
       </Link>
-    </div>
+    </div> */}
 
     {/* <div className='rosters_list' style={{'backgroundColor': 'yellowgreen'}}>
       <Link
@@ -40,9 +60,9 @@ function Home() {
       Mordheim (em implementação)
     </div> */}
 
-    <div className='footnote'>
+    {/* <div className='footnote'>
         Uses format from: <a href="https://www.battlescribe.net">BattleScribe</a>
-    </div>
+    </div> */}
   </div>
 }
 
