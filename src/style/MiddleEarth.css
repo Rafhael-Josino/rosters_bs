@@ -9,6 +9,10 @@
 
 /* Home page */
 
+.old-world {
+  min-height: 100dvh;
+}
+
 .old-world.title header {
   color: var(--divisors-color);
 }
